@@ -1,0 +1,18 @@
+Path tag attributes 
+starts with d=""
+
+M = starting (x,y) ending point in some case with jus (x ,y)
+L = line to (x,y)
+
+H = horizontal line to (x)
+V = vertical line to(y)
+
+C = curve to (x,y x,y)
+S = smooth curve to(x,y x,y)
+
+Q = quadratic Bézier curve(x,y)
+T = smooth quadratic Bézier curveto (x,y)
+
+A = elliptical Arc (x,y 0 0,1)
+
+Z = closepath
