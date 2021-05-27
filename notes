@@ -1,0 +1,3 @@
+<p data-team="Team A">
+html5 custom attribute you can use ""data-yourkeyword = "value"   "" to make custom attribute
+ p[data-team] css selector for custom attribute

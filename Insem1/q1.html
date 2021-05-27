@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul li:nth-child(1)
+        {
+            font-weight: bold;
+            
+        }
+        ul li:nth-child(odd)
+        {
+            background-color: lightgrey;
+            width: 10%;
+            
+        }
+        
+        p[data-team]{
+            font-style: italic;
+            
+        }
+       
+        
+    </style>
+</head>
+<body>
+    <p data-team="Team A">Team A
+        <ul><li>Ankur</li><li>Meenal</li><li>Rohan</li></ul>
+        <p>Description of team A</p>
+    </p>
+    <p data-team="Team B">Team B
+        <ul><li>Swati</li><li>Bharat</li><li>Diya</li></ul>
+        <p>Description of team B</p>
+    </p>
+    <p data-team="Team C">Team C
+        <ul><li>Paresh</li><li>Mehak</li><li>Asif</li></ul>
+    <p>Description of team C</p>
+    </p>
+
+    <p data-team="Team D">Team D
+        <ul><li>Paresh</li><li>Mehak</li><li>Asif</li></ul>
+    <p>Description of team D</p>
+    </p>
+</body>
+</html>
