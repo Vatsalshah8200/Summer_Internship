@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html><head>
+<style>
+.MenuWrap {
+background-color: black;
+font-family: 'Oswald', sans-serif;
+font-size: 1rem;
+padding: 0 1rem;
+display: flexbox;
+
+/* specify direction of main axis below */
+flex-direction: row;
+align-items: flex-start;
+line-height: 2.75rem;
+}
+.ListItem,
+.LastItem {
+color: #ebebeb;
+text-decoration: none;
+}
+.ListItem {
+margin-right: 1rem;
+
+}
+/* write media query construct for viewport width
+4 inches or less */
+@media  screen and (min-width: 4in){
+.MenuWrap {
+min-height: 2.75rem;
+
+/* specify direction of main axis below */
+flex-direction: column;
+}
+.LastItem {
+margin-left: 0%;
+}
+}
+</style></head>
+<body>
+<div class="MenuWrap">
+<a href="#" class="ListItem">Home</a>
+<a href="#" class="ListItem">About Us</a>
+<a href="#" class="ListItem">Products</a>
+<a href="#" class="ListItem">Policy</a>
+<a href="#" class="LastItem">Contact Us</a>
+</div>
+</body>
+</html>

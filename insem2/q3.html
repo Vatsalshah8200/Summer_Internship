@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function power(x,y)
+        {
+            let ans=1;
+        if(y)
+        {
+            for(var i =1;i<=y;i++)
+            {
+                ans = ans * x;
+            }
+        }
+        else{
+            ans=x*x;
+        }
+            return ans;
+        }
+        console.log(power(2,10));
+        console.log(power(5));
+        console.log("15" - 1);
+console.log("15" + 1);
+console.log("five" * 2);
+console.log(NaN == NaN);
+console.log(10 > 20 || 15);
+console.log(8 * null);
+let map = Object.create(null);
+console.log(map);
+
+function student(num)
+{
+    this.id=num;
+}
+let obj = new student(10);
+obj.speak = function()
+{
+    console.log("syanpse was  good");
+}
+console.log("student id = ",obj);
+obj.speak();
+    </script>
+</body>
+</html>
