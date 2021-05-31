@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+
+<head></head>
+
+<body>
+    <p>Reminders...</p>
+    <input id="RText" />
+    <button onclick="AddReminder()">Add</button>
+    <ul id="AllRs">
+    </ul>
+    <script>
+        /* your code goes here*/
+
+        function AddReminder() {
+            let temp = document.getElementById("RText").value;
+
+            let val = document.getElementById("AllRs");
+            var li = document.createElement("li");
+            li.textContent = temp;
+            val.appendChild(li);
+        }
+
+    </script>
+</body>

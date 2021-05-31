@@ -16,3 +16,5 @@ T = smooth quadratic Bézier curveto (x,y)
 A = elliptical Arc (x,y 0 0,1)
 
 Z = closepath
+
+alt+shift+f

@@ -6,13 +6,11 @@ let mongoose = require('mongoose');
 let app = express();
 
 var port = process.env.port || 8080;
-
-app.get('/',(req,res)=>
-
-res.send('welcome to express'));  
 app.listen(port,function(){
     console.log("Runnning firstrest on port "+ port);
 })
+app.get('/',(req,res) => res.send('welcome to express'));  
+
 
 app.use('/api',apiRoutes);
 app.use(bodyParser.urlencoded({

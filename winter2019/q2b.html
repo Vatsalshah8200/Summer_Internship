@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<head></head>
+
+<body>
+    <button>Red</button>
+
+    <button>Green</button>
+    <button>Blue</button>
+    <label id="TextWithColor"></label>
+    <script>
+        document.querySelectorAll('BUTTON').forEach(item => {
+            item.addEventListener('click', event => {
+                //handle click
+                //let val=document.getElementByTagName("BUTTON");
+                if (item.textContent == "Red") {
+                    document.getElementById("TextWithColor").style.color = "red";
+                    document.getElementById("TextWithColor").innerHTML = "RED";
+                }
+                else if (item.textContent == "Blue") {
+                    document.getElementById("TextWithColor").style.color = "blue";
+                    document.getElementById("TextWithColor").innerHTML = "BLUE";
+                }
+                else {
+                    document.getElementById("TextWithColor").style.color = "green";
+                    document.getElementById("TextWithColor").innerHTML = "GREEN";
+                }
+            })
+        })
+
+
+
+
+    </script>
+</body>

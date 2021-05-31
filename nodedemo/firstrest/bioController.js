@@ -1,6 +1,6 @@
 
 
-const Bio = require('./bioModel')
+ Bio = require('./bioModel')
 
 exports.index = function (req,res){
     Bio.get(function (err,bio){
@@ -21,7 +21,7 @@ exports.index = function (req,res){
 //For creating new bio
 exports.add = function (req, res) {
     console.log("heello");
-     console.log(req.body.name);
+     console.log(req.method,req.url);
      console.log("heello");
     var bio = new Bio();
     bio.name = req.body.name;
