@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Promise</h2>
+
+<p>Wait 3 seconds (3000 milliseconds) for this page to change.</p>
+
+<h1 id="demo"></h1>
+
+<script>
+  async function waiting(){
+    console.log("inside function");
+    const response = await setTimeout([{"name":"vatsal","age":"25"},{"name":"neel","age":"20"}],3000);
+    console.log("after timeout");
+    const data = await response.json();
+    return data;
+  }
+  console.log("before calling function");
+  let a = waiting();
+  console.log("after function");
+  console.log(a);
+  a.then(data => console.log(data));
+  console.log("last line");  
+
+</script>
+
+</body>
+</html>
