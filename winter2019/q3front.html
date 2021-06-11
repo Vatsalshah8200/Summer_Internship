@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<head>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+crossorigin="anonymous">
+</script>
+</head>
+<body>
+
+<p>Order Juices</p>
+<ul>
+<li style="margin:8px">
+<label id="AItem">Apple 1L</label>
+<label id="AStock">| 15 |</label>
+<input id="AQty"/>
+<button id="AOrder">Order</button>
+</li>
+<li style="margin:8px">
+<label id="OItem">Orange 1L</label>
+<label id="OStock">| 20 |</label>
+<input id="OQty"/>
+<button id="OOrder">Order</button>
+</li>
+<li style="margin:8px">
+<label id="GItem">Grapes 1L</label>
+<label id="GStock">| 15 |</label>
+<input id="GQty"/>
+<button id=GOrder>Order</button>
+</li>
+</ul>
+<script>
+    $(document).ready(function(){
+    $.ajax({
+        url: 'http://localhost:8080',
+        // dataType: "jsonp",
+        data: '{"data": "TEST"}',
+        type: 'POST',
+        jsonpCallback: 'callback', // this is not relevant to the POST anymore
+        success: function (data) {
+            var ret = jQuery.parseJSON(data);
+            $('#AOrder').html(ret.msg);
+            console.log('Success: ')
+        },
+        error: function (xhr, status, error) {
+            console.log('Error: ' + error.message);
+            $('#lblResponse').html('Error connecting to the server.');
+        },
+    });
+});
+
+document.querySelectorAll('BUTTON').forEach(item => {
+            item.addEventListener('click', event => {
+                if (item.id == "AOrder")
+                {
+                    if(document.getElementById("AQty").value)
+                    {
+                        requestajax();
+                    }
+                }
+                if (item.id == "OOrder")
+                {
+                    if(document.getElementById("OQty").value)
+                    {
+                        console.log(document.getElementById("OQty").value);
+                    }
+                }
+                if (item.id == "GOrder")
+                {
+                    if(document.getElementById("GQty").value)
+                    {
+                        console.log(document.getElementById("GQty").value);
+                    }
+                }
+            })
+        })
+</script>
+</body>
+<!-- https://www.youtube.com/watch?v=HlrJnN8t-94 -->

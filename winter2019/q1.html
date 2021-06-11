@@ -8,16 +8,19 @@
 </head>
 <body>
     <script>
-        var shortNames = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+        
         function weekDayName(n) {
+        var shortNames = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+            
+            function month31Name(n) {
+                var shortNames = ["Jan", "Mar", "May", "Jul", "Aug", "Oct", "Dec"];
+            return shortNames[n];
+        }
+        console.log(month31Name(2));
         return shortNames[n];
         }
         console.log(weekDayName(2));
-        var shortNames = ["Jan", "Mar", "May", "Jul", "Aug", "Oct", "Dec"];
-        function month31Name(n) {
-        return shortNames[n];
-}
-console.log(month31Name(2));
+        
     </script>
 </body>
 </html>
