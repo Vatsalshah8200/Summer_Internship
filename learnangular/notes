@@ -1,0 +1,5 @@
+npm install -g @angular/cli //installing angular cli
+ng new my-todo-list || ng.cmd new my-todo-list //to create basic app using angular
+ng serve || ng.cmd serve // to run the server
+main file is app.component.html,, css file is app.component.css,, type script file app.component.ts
+install vootstrap and jquery if wanted npm install (bootstrap | jquery) 
