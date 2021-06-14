@@ -29,13 +29,13 @@ crossorigin="anonymous">
 </li>
 </ul>
 <script>
-    $(document).ready(function(){
+    
+    void function requestajax(val){
     $.ajax({
-        url: 'http://localhost:8080',
-        // dataType: "jsonp",
-        data: '{"data": "TEST"}',
+        url: '/ajaxdemo',
+        data: {text:val},
         type: 'POST',
-        jsonpCallback: 'callback', // this is not relevant to the POST anymore
+        
         success: function (data) {
             var ret = jQuery.parseJSON(data);
             $('#AOrder').html(ret.msg);
@@ -43,10 +43,10 @@ crossorigin="anonymous">
         },
         error: function (xhr, status, error) {
             console.log('Error: ' + error.message);
-            $('#lblResponse').html('Error connecting to the server.');
+            
         },
     });
-});
+}
 
 document.querySelectorAll('BUTTON').forEach(item => {
             item.addEventListener('click', event => {
@@ -54,7 +54,7 @@ document.querySelectorAll('BUTTON').forEach(item => {
                 {
                     if(document.getElementById("AQty").value)
                     {
-                        requestajax();
+                        requestajax(document.getElementById("AQty").value);
                     }
                 }
                 if (item.id == "OOrder")
